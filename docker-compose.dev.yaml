@@ -1,0 +1,23 @@
+version: "3.8"
+
+services:
+  adminer:
+    restart: always
+    image: adminer:latest
+    ports:
+      - 8080:8080
+
+  postgres:
+    restart: always
+    image: postgres:14.5
+    environment:
+      POSTGRES_USER: "dev"
+      POSTGRES_PASSWORD: "dev"
+      POSTGRES_DB: "CSharpBoard"
+    volumes:
+      - postgres_dev_db:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+
+volumes:
+  postgres_dev_db:
