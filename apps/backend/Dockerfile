@@ -4,6 +4,10 @@ WORKDIR /app
 
 COPY *.csproj ./
 
+RUN dotnet tool install -g dotnet-references
+
+ENV PATH="${PATH}:/root/.dotnet/tools"
+
 RUN dotnet restore
 
 COPY . ./
