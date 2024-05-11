@@ -1,0 +1,32 @@
+{
+  "name": "csharpboard",
+  "version": "1.0.0",
+  "description": "React ToDo Kanban PoC with backend written on C#.",
+  "type": "module",
+  "scripts": {
+    "backend:restore": "dotnet restore",
+    "backend:dev": "dotnet run --project ./apps/backend",
+    "frontend:preview": "pnpm -F @csharpboard/frontend preview",
+    "frontend:build": "pnpm -F @csharpboard/frontend build",
+    "frontend:dev": "pnpm -F @csharpboard/frontend dev",
+    "frontend:api:sync": "pnpm -F @csharpboard/frontend sync"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LWJerri/CSharpBoard.git"
+  },
+  "keywords": [],
+  "author": "LWJerri (lwjerri.dev)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LWJerri/CSharpBoard/issues"
+  },
+  "homepage": "https://github.com/LWJerri/CSharpBoard#readme",
+  "devDependencies": {
+    "prettier": "3.2.5",
+    "prettier-plugin-tailwindcss": "0.5.14"
+  }
+}
