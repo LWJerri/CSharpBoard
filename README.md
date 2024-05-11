@@ -22,7 +22,7 @@ React ToDo Kanban PoC with backend written on C#.
 ### With Docker
 
 1. Create new `.env.demo` and paste all environments from `.env.demo.example` file.
-1. Run `docker-compose -f docker-compose.demo.yaml --env-file=.emv.demo up --build -d --remove-orphans`.
+1. Run `docker-compose -f docker-compose.demo.yaml --env-file=.env.demo up --build -d --remove-orphans`.
 
 ## License
 
