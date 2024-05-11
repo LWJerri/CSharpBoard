@@ -8,7 +8,7 @@ RUN dotnet tool install -g dotnet-references
 
 ENV PATH="${PATH}:/root/.dotnet/tools"
 
-RUN dotnet restore
+RUN dotnet restore /app/backend.csproj
 
 COPY . ./
 
