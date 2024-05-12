@@ -4,6 +4,7 @@ import { Form, FormField, FormItem, FormLabel, FormMessage } from "@/components/
 import { Input } from "@/components/ui/input";
 import { useToast } from "@/components/ui/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "../../ui/button";
@@ -18,14 +19,14 @@ const CreateList = (props: { open: boolean; close: () => void }) => {
 
   const { toast } = useToast();
 
-  const form = useForm<z.infer<typeof CreateListSchema>>({ resolver: zodResolver(CreateListSchema), mode: "onChange" });
+  const form = useForm<z.infer<typeof CreateListSchema>>({ resolver: zodResolver(CreateListSchema), mode: "all" });
+
+  useEffect(() => form.reset(), [open]);
 
   const addLists = store((state) => state.addLists);
 
   async function onSubmit(data: z.infer<typeof CreateListSchema>) {
     const request = await api.POST("/lists", { body: data });
-
-    form.reset();
 
     if (request.data) {
       const { data } = request;

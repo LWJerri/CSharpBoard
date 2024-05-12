@@ -35,7 +35,7 @@ const EditTask = (props: { open: boolean; close: () => void; listId: string; tas
   const [openPrioritySelector, setOpenPrioritySelector] = useState(false);
   const [openListSelector, setOpenListSelector] = useState(false);
 
-  const form = useForm<z.infer<typeof EditTaskSchema>>({ resolver: zodResolver(EditTaskSchema), mode: "onChange" });
+  const form = useForm<z.infer<typeof EditTaskSchema>>({ resolver: zodResolver(EditTaskSchema), mode: "all" });
 
   useEffect(() => form.reset(), [open]);
 
@@ -54,8 +54,6 @@ const EditTask = (props: { open: boolean; close: () => void; listId: string; tas
       body: { ...restData, dueAt: preparedDueAt },
       params: { path: { listId, id: taskId } },
     });
-
-    form.reset();
 
     if (request.data) {
       const { data } = request;

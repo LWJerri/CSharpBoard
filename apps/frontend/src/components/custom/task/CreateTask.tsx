@@ -33,7 +33,7 @@ const CreateTask = (props: { open: boolean; close: () => void; listId: string })
   const [openDateSelector, setOpenDateSelector] = useState(false);
   const [openPrioritySelector, setOpenPrioritySelector] = useState(false);
 
-  const form = useForm<z.infer<typeof CreateTaskSchema>>({ resolver: zodResolver(CreateTaskSchema), mode: "onChange" });
+  const form = useForm<z.infer<typeof CreateTaskSchema>>({ resolver: zodResolver(CreateTaskSchema), mode: "all" });
 
   useEffect(() => form.reset(), [open]);
 
@@ -48,8 +48,6 @@ const CreateTask = (props: { open: boolean; close: () => void; listId: string })
       body: { dueAt: new Date(dueAt).toISOString(), ...fields },
       params: { path: { listId } },
     });
-
-    form.reset();
 
     if (request.data) {
       const { data } = request;

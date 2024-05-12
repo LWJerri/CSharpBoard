@@ -3,6 +3,7 @@ import { store } from "@/app/store";
 import { Form, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import { useToast } from "@/components/ui/use-toast";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { Button } from "../../ui/button";
@@ -23,10 +24,10 @@ const EditList = (props: { open: boolean; close: () => void; listId: string }) =
 
   const form = useForm<z.infer<typeof EditListSchema>>({ resolver: zodResolver(EditListSchema), mode: "onChange" });
 
+  useEffect(() => form.reset(), [open]);
+
   async function onSubmit(data: z.infer<typeof EditListSchema>) {
     const request = await api.PATCH("/lists/{id}", { body: data, params: { path: { id: getList.id } } });
-
-    form.reset();
 
     if (request.data) {
       const { data } = request;
