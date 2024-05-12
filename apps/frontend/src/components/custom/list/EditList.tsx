@@ -26,6 +26,8 @@ const EditList = (props: { open: boolean; close: () => void; listId: string }) =
   async function onSubmit(data: z.infer<typeof EditListSchema>) {
     const request = await api.PATCH("/lists/{id}", { body: data, params: { path: { id: getList.id } } });
 
+    form.reset();
+
     if (request.data) {
       const { data } = request;
 

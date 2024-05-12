@@ -55,6 +55,8 @@ const EditTask = (props: { open: boolean; close: () => void; listId: string; tas
       params: { path: { listId, id: taskId } },
     });
 
+    form.reset();
+
     if (request.data) {
       const { data } = request;
 

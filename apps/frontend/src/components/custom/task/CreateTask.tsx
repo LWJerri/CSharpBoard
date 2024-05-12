@@ -49,6 +49,8 @@ const CreateTask = (props: { open: boolean; close: () => void; listId: string })
       params: { path: { listId } },
     });
 
+    form.reset();
+
     if (request.data) {
       const { data } = request;
 

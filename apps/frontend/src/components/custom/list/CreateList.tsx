@@ -25,6 +25,8 @@ const CreateList = (props: { open: boolean; close: () => void }) => {
   async function onSubmit(data: z.infer<typeof CreateListSchema>) {
     const request = await api.POST("/lists", { body: data });
 
+    form.reset();
+
     if (request.data) {
       const { data } = request;
 
