@@ -1,7 +1,7 @@
 {
   "name": "csharpboard",
   "version": "1.0.0",
-  "description": "React ToDo Kanban PoC with backend written on C#.",
+  "description": "React ToDo Kanban with backend written on C#.",
   "type": "module",
   "scripts": {
     "backend:restore": "dotnet restore",

@@ -1,6 +1,6 @@
 # CSharpBoard
 
-React ToDo Kanban PoC with backend written on C#.
+React ToDo Kanban with backend written on C#.
 
 ## Installation
 
