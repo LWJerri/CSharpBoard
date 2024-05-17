@@ -31,8 +31,6 @@ services:
   frontend:
     restart: always
     image: registry.main.lwjerri.dev/lwjerri/csharpboard-frontend:latest
-    environment:
-      - VITE_API_URL=${VITE_API_URL}
     networks:
       - caddy
     depends_on:
