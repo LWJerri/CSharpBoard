@@ -45,8 +45,8 @@ importers:
         specifier: 2.2.4
         version: 2.2.4(react-redux@9.1.2)(react@18.3.1)
       '@tabler/icons-react':
-        specifier: 3.3.0
-        version: 3.3.0(react@18.3.1)
+        specifier: 3.4.0
+        version: 3.4.0(react@18.3.1)
       class-variance-authority:
         specifier: 0.7.0
         version: 0.7.0
@@ -60,8 +60,8 @@ importers:
         specifier: 3.6.0
         version: 3.6.0
       openapi-fetch:
-        specifier: 0.9.5
-        version: 0.9.5
+        specifier: 0.9.7
+        version: 0.9.7
       openapi-typescript:
         specifier: 6.7.5
         version: 6.7.5
@@ -1649,17 +1649,17 @@ packages:
     dev: true
     optional: true
 
-  /@tabler/icons-react@3.3.0(react@18.3.1):
-    resolution: {integrity: sha512-Qn1Po+0gErh1zCWlaOdoVoGqeonWfSuiboYgwZBs6PIJNsj7yr3bIa4BkHmgJgtlXLT9LvCzt/RvwlgjxLfjjg==}
+  /@tabler/icons-react@3.4.0(react@18.3.1):
+    resolution: {integrity: sha512-hwRXZ//7B3d8FSb2loMj67s8UZeneCsOCs+Acv0KllWXS15brpFjdi6ROf/Vq5+vr1brFf+xmSTiQkKlEF1Yaw==}
     peerDependencies:
       react: '>= 16'
     dependencies:
-      '@tabler/icons': 3.3.0
+      '@tabler/icons': 3.4.0
       react: 18.3.1
     dev: false
 
-  /@tabler/icons@3.3.0:
-    resolution: {integrity: sha512-PLVe9d7b59sKytbx00KgeGhQG3N176Ezv8YMmsnSz4s0ifDzMWlp/h2wEfQZ0ZNe8e377GY2OW6kovUe3Rnd0g==}
+  /@tabler/icons@3.4.0:
+    resolution: {integrity: sha512-6gYHXG0xAJgt2KPcTYDqhe3xYoJMTgz/ZfYup4EUHsxzYsz6rBlt8WgavHsGaWckaqH7ApR/epYslfXZjK27yw==}
     dev: false
 
   /@types/babel__core@7.20.5:
@@ -2891,8 +2891,8 @@ packages:
     resolution: {integrity: sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==}
     engines: {node: '>= 6'}
 
-  /openapi-fetch@0.9.5:
-    resolution: {integrity: sha512-ToRnypJB2G5bEUZqJ4mGty/qDVgAZ4BW0znlXQAECxAp4EM8dYtgQ1mrw2Ij6W7knN4VawHvFq8uTqzXyMGNPA==}
+  /openapi-fetch@0.9.7:
+    resolution: {integrity: sha512-NMp/GEmWSGO0b2d731IdGXcMP2PF85Rk1q+oy2Mx/DYMdP3pgTZTRamKxgZpkHhM4iOVsyD1iP5HKL9Fr6CH2Q==}
     dependencies:
       openapi-typescript-helpers: 0.0.8
     dev: false
