@@ -4,8 +4,7 @@ WORKDIR /app
 
 COPY .npmrc ./apps/frontend ./
 
-RUN corepack enable
-
+RUN npm i pnpm@latest -g
 RUN pnpm i -r
 
 ARG VITE_API_URL
