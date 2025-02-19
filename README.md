@@ -12,7 +12,7 @@ React ToDo Kanban with backend written on C#.
 
 1. Install `.Net SDK` and all necessary tools (see [here](https://code.visualstudio.com/docs/csharp/get-started)).
 2. Install [nvm](https://github.com/nvm-sh/nvm) or [LTS Node.js](https://nodejs.org) directly from official website.
-3. Activate corepack (`corepack enable`) to enable pnpm or install it manually: `npm i pnpm@latest -g`.
+3. Installed pnpm: `npm i pnpm@latest -g`.
 4. Install all project dependencies - `pnpm i -r`.
 5. Create `.env` file inside `apps/frontend` folder and paste environments from `.env.example` file.
 6. Build frontend app - `pnpm frontend:build`.
